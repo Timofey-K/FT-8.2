@@ -7,6 +7,7 @@
  */
 package com.company;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  * Main - выполняет программу по заданию 8.2.
@@ -32,15 +33,12 @@ import java.util.Scanner;
         String text2 = in.nextLine();             //с помощью метода Utils
         Utils.print(text, Color.valueOf(text2));
 
+        Random rnd = new Random();
         Color[] colors = Color.values();          //Вывод случайного объекта Enam
-        final int max = colors.length;            //с помощью статического метода Enam
-        final int rnd1 = rnd(max);
+        final int max = colors.length + 1;            //с помощью статического метода Enam
+        final int rnd1 = rnd.nextInt(max);
+
         System.out.println(colors[rnd1]);
-    }
-
-
-   public static int rnd(int max) {
-    return (int) (Math.random() * ++max);
     }
 }
 
