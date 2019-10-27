@@ -1,5 +1,18 @@
+/*
+ * Enam - указывает списокок цветов которые можно использовать
+ *
+ * V 2.0  -  27.10.2019
+ *
+ * Timoxa
+ */
 package com.company;
 
+
+/**
+ *Список возможных цветов.
+ *@version 2.0 Oct 2019
+ *@author Timofey Kalinin
+ */
 public enum Color {
     BLACK("Чёрный"),
     RED("Красный"),
@@ -12,11 +25,11 @@ public enum Color {
 
     private String color;
 
-    Color(String color){
-        this.color = color;
+    Color(final String ccolor) {
+        this.color = ccolor;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
